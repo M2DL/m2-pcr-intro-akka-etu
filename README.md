@@ -50,3 +50,33 @@ passe à l’acteur suivant dans la chaîne (dont il a mémorisé l’adresse ca
 
 3. Modifier le programme pour terminer en chaîne l’exécution des acteurs une fois que tout les nombres ont
 été envoyés.
+
+### Partie 3 - Cryptage et contrôle d'erreur
+
+En s’appuyant sur les méthodes disponibles dans la classe StringUtils fournie dans le package
+"m2dl.pcr.akka.stringservices", définir et implémenter dans ce même package une application dans laquelle cohabitent
+un service de cryptage CryptageProvider et un service d’ajout de contrôle d’erreur ErreurControleProvider pour des
+chaînes de caractères.
+
+Chaque service sera représenté par un acteur, leurs caractéristqiues sont les suivantes :
+
+— CryptageProvider reçoit des messages contenant une chaîne de caractères et l’adresse d’un acteur récepteur (Recepteur). Il
+encrypte la chaîne de caractère et l’envoi à l’acteur Recepteur.
+
+— ErreurControleProvider reçoit des messages contenant une chaîne de caractères et l’adresse d’un acteur récepteur (Recepteur).
+Il ajoute un contrôle d’erreur à la chaîne de caractère et l’envoi à l’acteur Recepteur.
+
+Ces services seront utilisé séparément (pour les tester individuellement) ainsi que composés. L’acteur Recepteur sera
+susceptible de recevoir ces différents types de résultats (encrypté, avec contrôle d’erreur et composition).
+
+Nous nous restreindrons aux 3 cas d’utilisation suivants :
+
+— ActorSystem -> CryptageProvider -> Recepteur
+
+— ActorSystem -> ErreurControleProvider -> Recepteur
+
+— ActorSystem -> CryptageProvider -> ErreurControleProvider -> Recepteur
+
+L’ActorSystem créera les différents services et le récepteur, et lancera ces 3 cas d’utilisation.
+ATTENTION! Bien sûr, l’émetteur (ActorSystem) ne devra pas faire la composition lui-même pour ne pas être bloqué en
+attente du résultat intermédiaire de la composition.
