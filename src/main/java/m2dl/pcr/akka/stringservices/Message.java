@@ -2,10 +2,12 @@ package m2dl.pcr.akka.stringservices;
 
 import akka.actor.ActorRef;
 
+import java.io.Serializable;
+
 /**
  * Created by franck on 23/05/2016.
  */
-public class Message {
+public class Message implements Serializable {
 
     private String contenu ;
     private ActorRef recepteur ;
