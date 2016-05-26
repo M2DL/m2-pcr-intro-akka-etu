@@ -43,4 +43,10 @@ public class EratosteneNode extends UntypedActor {
             unhandled(msg);
         }
     }
+
+    @Override
+    public void postStop() throws Exception {
+        super.postStop();
+        log.info("Terminating eratostene-node-" + primeNumber);
+    }
 }
