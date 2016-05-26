@@ -18,6 +18,7 @@ public class EratosteneNode extends UntypedActor {
 
     private final LoggingAdapter log = Logging.getLogger(getContext().system(), this);
 
+    private ActorRef previousNode;
     private ActorRef nextNode;
 
     public EratosteneNode(int primeNumber) {
@@ -28,7 +29,23 @@ public class EratosteneNode extends UntypedActor {
     @Override
     public void onReceive(Object msg) throws Exception {
 
-        if (msg instanceof Integer) {
+        if (msg instanceof String && "QUIT".equals(msg)) {
+            previousNode = getSender();
+            if (nextNode == null) {
+                getSender().tell("STOP", getSelf());
+                Thread.sleep(100);
+                getContext().stop(getSelf());
+
+            } else {
+                nextNode.tell(msg, getSelf());
+            }
+
+        } else if (msg instanceof String && "STOP".equals(msg)) {
+            previousNode.tell("QUIT", getSelf());
+            Thread.sleep(100);
+            getContext().stop(getSelf());
+
+        } else if (msg instanceof Integer) {
             int number = (Integer) msg;
             if (number % primeNumber == 0) {
 

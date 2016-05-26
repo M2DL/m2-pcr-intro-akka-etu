@@ -25,6 +25,6 @@ public class SystemEratostene {
             actorRef.tell(i, null);
         }
 
-        actorRef.tell(PoisonPill.getInstance(), null);
+        actorRef.tell("QUIT", null);
     }
 }
