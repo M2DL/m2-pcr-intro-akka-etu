@@ -56,7 +56,7 @@ En s’appuyant sur les méthodes disponibles dans la classe StringUtils fournie
 un service de cryptage CryptageProvider et un service d’ajout de contrôle d’erreur ErreurControleProvider pour des
 chaînes de caractères.
 
-Chaque service sera représenté par un acteur, leurs caractéristqiues sont les suivantes :
+Chaque service sera représenté par un acteur, leurs caractéristiques sont les suivantes :
 - CryptageProvider reçoit des messages contenant une chaîne de caractères et l’adresse d’un acteur récepteur (Recepteur). Il
 encrypte la chaîne de caractère et l’envoi à l’acteur Recepteur.
 - ErreurControleProvider reçoit des messages contenant une chaîne de caractères et l’adresse d’un acteur récepteur (Recepteur).
