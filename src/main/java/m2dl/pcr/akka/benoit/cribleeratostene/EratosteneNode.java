@@ -48,5 +48,8 @@ public class EratosteneNode extends UntypedActor {
     public void postStop() throws Exception {
         super.postStop();
         log.info("Terminating eratostene-node-" + primeNumber);
+        if (nextNode == null) {
+            getContext().system().terminate();
+        }
     }
 }
