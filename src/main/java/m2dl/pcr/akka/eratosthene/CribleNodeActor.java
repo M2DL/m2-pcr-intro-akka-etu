@@ -30,8 +30,8 @@ public class CribleNodeActor extends UntypedActor {
                 if (nextInteger % integerNode != 0) { // c'est 1 nb premier
                     log.info(msg.toString()); // affiche le nombre
                     nextActorRef = getContext().actorOf(Props.create(CribleNodeActor.class, nextInteger),nextInteger.toString());
+                    getContext().become(interNode);
                 }
-                getContext().become(interNode);
             } else {
                 unhandled(msg);
             }
