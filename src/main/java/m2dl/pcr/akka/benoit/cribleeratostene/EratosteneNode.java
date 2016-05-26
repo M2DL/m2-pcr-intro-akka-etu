@@ -10,7 +10,7 @@ import akka.event.slf4j.Logger;
 import m2dl.pcr.akka.benoit.exercice12.HelloGoodbyeActor;
 
 /**
- * Created by benoit on 26/05/2016.
+ * Created by Benoît Sauvère on 26/05/2016.
  */
 public class EratosteneNode extends UntypedActor {
 
