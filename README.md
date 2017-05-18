@@ -79,7 +79,7 @@ attente du résultat intermédiaire de la composition.
 L'objectif de cette partie est d'illustrer les capacités de Akka pour la gestion d'acteurs distribués (*remote capabilities*).
 Deux liens utils pour mener à bien votre travail :
 - [Documentation Akka sur les aspects *remoting*](http://doc.akka.io/docs/akka/2.4.4/java/remoting.html)
-- [L'exemple fourni par le projet Akka sur Github](https://github.com/akka/akka/tree/master/akka-samples/akka-sample-remote-java)
+- [L'exemple fourni par le projet Akka sur Github](https://github.com/akka/akka-samples/tree/2.5/akka-sample-remote-java)
 
 Reprendre le 3ème cas d'utilisation de la partie 3 (composition) de telle sorte que votre application déployée dans une VM
 dédiée exploite les acteurs CryptageProvider et ErreurControleProvider déployés chacun sur une VM dédiée.
