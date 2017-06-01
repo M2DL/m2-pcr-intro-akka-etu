@@ -19,7 +19,7 @@ public class ComposerHelper extends UntypedActor {
     @Override
     public void onReceive(Object msg) throws Exception {
         if (msg instanceof Message) {
-            nextProvider.tell(new Message(((Message) msg).getContenu(),recepteur),recepteur);
+            nextProvider.tell(new Message(((Message) msg).getContenu(),recepteur),null);
             getContext().stop(getSelf());
         } else {
             unhandled(msg);
