@@ -16,7 +16,7 @@ public class UC3System {
 
     public static void main(String... args) throws Exception {
 
-        log.debug("Simple use case 2 : ActorSystem -> CryptageProvider -> ErreurControleProvider -> Recepteur");
+        log.debug("Simple use case 3 : ActorSystem -> CryptageProvider -> ErreurControleProvider -> Recepteur");
 
         final ActorSystem actorSystem = ActorSystem.create("actor-system");
         Thread.sleep(5000);
