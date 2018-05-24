@@ -41,12 +41,12 @@ passe à l’acteur suivant dans la chaîne (dont il a mémorisé l’adresse ca
 ![Crible d'Ératosthène](crible.png)
 
 
-1. Dans un nouveau package, implémenter cet algorithme de telle sorte que l’on puisse passer les nombres de 3 à N
+1. Dans un nouveau package, implémentez cet algorithme de telle sorte que l’on puisse passer les nombres de 3 à N
 (argument du programme) à un acteur représentant le nombre 2 que l’on aura créé auparavant.
 
 2. À chaque fois qu’un nombre premier sera trouvé, il faudra l’afficher.
 
-3. Modifier le programme pour terminer en chaîne l’exécution des acteurs une fois que tout les nombres ont
+3. Modifiez le programme pour terminer en chaîne l’exécution des acteurs une fois que tout les nombres ont
 été envoyés.
 
 ### Partie 3 - Cryptage et contrôle d'erreur
@@ -62,7 +62,7 @@ encrypte la chaîne de caractère et l’envoi à l’acteur Recepteur.
 - ErreurControleProvider reçoit des messages contenant une chaîne de caractères et l’adresse d’un acteur récepteur (Recepteur).
 Il ajoute un contrôle d’erreur à la chaîne de caractère et l’envoi à l’acteur Recepteur.
 
-Ces services seront utilisé séparément (pour les tester individuellement) ainsi que composés. L’acteur Recepteur sera
+Ces services seront utilisés séparément (pour les tester individuellement) ainsi que composés. L’acteur Recepteur sera
 susceptible de recevoir ces différents types de résultats (encrypté, avec contrôle d’erreur et composition).
 
 Nous nous restreindrons aux 3 cas d’utilisation suivants :
