@@ -66,13 +66,15 @@ Ces services seront utilisés séparément (pour les tester individuellement) ai
 susceptible de recevoir ces différents types de résultats (encrypté, avec contrôle d’erreur et composition).
 
 Nous nous restreindrons aux 3 cas d’utilisation suivants :
-- ActorSystem -> CryptageProvider -> Recepteur
-- ActorSystem -> ErreurControleProvider -> Recepteur
-- ActorSystem -> CryptageProvider -> ErreurControleProvider -> Recepteur
 
-L’ActorSystem créera les différents services et le récepteur, et lancera ces 3 cas d’utilisation.
-ATTENTION! Bien sûr, l’émetteur (ActorSystem) ne devra pas faire la composition lui-même pour ne pas être bloqué en
-attente du résultat intermédiaire de la composition.
+- -> CryptageProvider -> Recepteur
+- -> ErreurControleProvider -> Recepteur
+- -> CryptageProvider -> ErreurControleProvider -> Recepteur
+
+L’ActorSystem créera les différents services et le récepteur.
+
+Le troisième cas d'utilisation correspond à la mise en œuvre de la composition des services. 
+Il est attendu une implantation conforme à la solution étudiée en TD.
 
 ### Partie 4 - Cryptage et contrôle d'erreur en mode distribué
 
