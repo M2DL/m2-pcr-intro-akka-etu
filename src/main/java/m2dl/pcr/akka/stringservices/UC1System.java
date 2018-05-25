@@ -3,8 +3,6 @@ package m2dl.pcr.akka.stringservices;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
-import m2dl.pcr.akka.eratosthene.CribleNodeActor;
-import m2dl.pcr.akka.eratosthene.System;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +11,7 @@ import org.slf4j.LoggerFactory;
  */
 public class UC1System {
 
-    public static final Logger log = LoggerFactory.getLogger(System.class);
+    public static final Logger log = LoggerFactory.getLogger(UC1System.class);
 
     public static void main(String... args) throws Exception {
 
