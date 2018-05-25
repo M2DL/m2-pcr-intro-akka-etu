@@ -73,8 +73,8 @@ Nous nous restreindrons aux 3 cas d’utilisation suivants :
 
 L’ActorSystem créera les différents services et le récepteur.
 
-Le troisième cas d'utilisation correspond à la mise en œuvre de la composition des services. 
-Il est attendu une implantation conforme à la solution étudiée en TD.
+Le troisième cas d'utilisation correspond à la mise en œuvre de la composition séquentielle des services. 
+Il est attendu une implantation conforme à la solution étudiée en cours.
 
 ### Partie 4 - Cryptage et contrôle d'erreur en mode distribué
 
