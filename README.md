@@ -86,3 +86,23 @@ Deux liens utils pour mener à bien votre travail :
 Reprendre le 3ème cas d'utilisation de la partie 3 (composition) de telle sorte que votre application déployée dans une VM
 dédiée exploite les acteurs CryptageProvider et ErreurControleProvider déployés chacun sur une VM dédiée.
 
+### Partie 5 - Conception et programmation d'un agent mobile basé sur le modèle d'acteur.
+
+Dans un nouveau package, définir et implémenter une application dans laquelle un acteur "mobile" s'exécute séquentiellement sur plusieurs "places".
+Ici, les places sont des objets de type ActorSystem.
+Le comportement de base de cet acteur est d'afficher la place sur laquelle il se trouve en réponse au message "Where are you?".
+L'acteur réagit aussi à un autre type de message de type ActorSystem. Alors, il "se déplace" dans cette nouvelle place passée par message, conformément au protocole vu en cours.
+
+Pour déployer et tester l'application, on ouvrira trois places de nom "Marseille", "Lyon" et "Paris". 
+L'agent mobile sera initialement créé "à Marseille", puis on lui demandera de se déplacer succéssivement "à Lyon" puis "à Paris". Après la création et après chaque déplacement, on lui demandera d'afficher la place sur laquelle il se trouve. Tous ces messages seront envoyés à la référence initiale de l'acteur mobile.
+
+Dans une étape suivante, on pourra répartir les places sur différentes machines virtuelles pour exécuter réellement dans un contexte réparti.
+
+### Partie 6 - LightSlack (travail en binôme)
+
+L'objectif de cette activité est le développement d'un serveur et d'un client de discussion (très) rudimentaire à l'aide d'Akka.
+
+1. Implantez le serveur de discussions.
+2. Implantez un client de votre serveur de discussions en utilisant les librairies d'interface de votre choix (JavaFX, Swing, ligne de commande).
+ 
+
